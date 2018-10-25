@@ -1,3 +1,41 @@
+
+#Initialize git repo in local:
+	mkdir learning_git
+	cd learning_git
+	git init
+	git status
+
+#Creat new file and add to staging:
+	vi hello.py
+		# hello.py
+		print('hello Git!')
+	git status
+
+	To move new to staging area.
+	git add hello.py
+	git status
+
+	Now Git knows about hello.py and lists it under changes to be committed.
+
+#Committing file:
+	for commit the changes we use git commit command with "-m" option for metion short info about that file changes.
+	git commit -m "creating hello.py"
+	git status
+	it shows working directory clean.
+
+#.gitignore
+	We will see that there are a bunch of files that show up in the untracked section and that we want Git to just not see. Then we use .gitignore file for ignoring other than sourcecode file or unwanted file.
+	vi .gitignore
+		# .gitignore
+		*__pycache__
+		*.pyc
+		*.txt
+
+#git log
+	Git log shows the history of the commits that we have made up to this point.
+		git log
+
+
 #Branching Basics:
 	To create new branch, if below command executed from master or any other branch new branch will have all the commits of parent branch commit where HEAD pointing.
 		git checkout -b my_new_feature
@@ -63,3 +101,5 @@
 
 #Source :
 	https://realpython.com/python-git-github-intro/
+	https://git-scm.com/book/en/v2
+	https://github.com/jima80525/github-playground/blob/master/git-commands.md
